@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css">
+  <title>Login</title>
+</head>
+
+<body>
+  <header class="showcase">
+    <div class="showcase-content" id="llodin">
+      <div class="showcase-top">
+        <h1>LOGIN</h1>
+      </div>
+      <div class="formm">
+        <form>
+          <h2>Welcome user
+          </h2>
+          <div class="info">
+            <input class="email" type="email" placeholder="Email" id="email"> <br>
+            <input class="email" type="password" placeholder="Password" id="password">
+          </div>
+          <div class="btn">
+            <button class="btn-primary" type="submit" onclick="signIn()">Sign In</button>
+          </div>
+          <div class="help">
+            <div>
+              <input value="true" type="checkbox"><label>Remember me</label>
+            </div>
+          </div>
+          <div class="signup">
+            <p>New to User ?</p>
+           <p id="signupnow"> <a href="#" >Sign up now</a></p> 
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+
+    <div class="showcase-content1" id="show" >
+        <div class="showcase-top">
+          <h1>Sign-In</h1>
+        </div>
+        <div class="formm">
+          <form>
+            <h2>Welcome user
+            </h2>
+            <div class="info">
+              <input class="name" type="text" placeholder="Enter Your Full Name" id="Name"> <br>
+              <input class="email" type="email" placeholder="Email" id="email"> <br>
+              <input class="email" type="password" placeholder="Password" id="password">
+            </div>
+            <div class="btn">
+              <button class="btn-primary" type="submit" onclick="signIn()">Sign In</button>
+            </div>
+            <div class="help">
+              <div>
+                <input value="true" type="checkbox"><label>Remember me</label>
+              </div>
+            </div>
+            <div class="signup">
+              <p></p>
+             <p id="loginnow"> <a href="#">Login now</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+  </header>
+
+
+  
+  <script src="./index.js"></script>
+</body>
+<script>let doctitle = document.title;
+    window.addEventListener("blur", () => {
+      document.title = "👋 Hey! come back...";
+    });
+    window.addEventListener("focus", () => {
+      document.title = doctitle;
+    });
+
+    // Function to handle the signup link click
+    document.getElementById('signupnow').addEventListener('click', function() {
+        // Hide the login section
+        document.getElementById('llodin').style.display = 'none';
+        
+        // Show the signup section
+        document.getElementById('show').style.display = 'block';
+    });
+
+      // Function to handle the signup link click
+      document.getElementById('loginnow').addEventListener('click', function() {
+        // Hide the login section
+        document.getElementById('llodin').style.display = 'block';
+        
+        // Show the signup section
+        document.getElementById('show').style.display = 'none';
+    });
+
+
+    // let a=document.getElementById("signupnow");
+    // let c=document.getElementById("llodin");
+    // let b=document.getElementById("show");
+
+
+
+
+    // a.addEventListener("click", function(){
+    //     console.log("asdbjhasvfjhvjh")
+    //     c.body.style.display="none";
+    //     b.body.style.display="none";
+    // })
+    </script>
+</html>
